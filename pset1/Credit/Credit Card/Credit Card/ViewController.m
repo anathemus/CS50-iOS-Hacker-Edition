@@ -20,15 +20,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-- (IBAction)creditInput:(id)sender {
-    if (_credit.text.length < 13 || _credit.text.length == 14 || _credit.text.length > 16) {
+- (IBAction)creditInput:(id)sender
+{
+    if (_credit.text.length < 13 || _credit.text.length == 14 || _credit.text.length > 16)
+    {
         _creditLabel.text = (@"INVALID");
-    } else {
+    }
+    else
+    {
         NSMutableArray *creditCardDigits;
         NSNumber *numberGrabber;
         int digits = [_credit.text intValue];
         
-        for (int i = 0; i > _credit.text.length; i++) {
+        for (int i = 0; i > _credit.text.length; i++)
+        {
             numberGrabber = [NSNumber numberWithInt:digits % 10];
             creditCardDigits[i] = numberGrabber;
             digits = digits / 10;
